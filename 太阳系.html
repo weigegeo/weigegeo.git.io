@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="html" content="郭志伟">
+        <title>太阳系</title>
+        <style>
+            body{
+                margin: 0;
+                height: 100vh;
+                background-color: black;
+            }
+            .sun{
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+                /*将太阳移动到屏幕中心*/
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -50px;
+                margin-top: -50px;
+                border-radius: 50%;
+                box-shadow: 0 0 30px gold;
+            }
+            .earth{
+                width: 300px;
+                height: 300px;
+                border: 1px solid white;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -150px;
+                margin-top: -150px;
+                border-radius: 50%;
+                animation: zhuan 12s linear infinite;
+            }
+            .earth::after{
+                content: '';
+                width: 30px;
+                height: 30px;
+                background: deepskyblue;
+                position: absolute;
+                left: 0;
+                top: 150px;
+                margin-left: -15px;
+                margin-top: -15px;
+                border-radius: 50%;    
+            }
+            .moon{
+                width: 80px;
+                height: 80px;
+                /*border: 1px solid white;*/
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-left: -40px;
+                margin-top: -40px;
+                border-radius: 50%;
+                animation: zhuan 1s linear infinite;
+            }
+            .moon::after{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: yellow;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-left: -10px;
+                margin-top: -10px;
+                border-radius: 50%; 
+            }
+            .mars{
+                width: 500px;
+                height: 500px;
+                border: 1px solid white;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -250px;
+                margin-top: -250px;
+                border-radius: 50%;
+                animation: zhuan 24s linear infinite;
+            }
+            .mars::after{
+                content: '';
+                width: 50px;
+                height: 50px;
+                background: orangered;
+                position: absolute;
+                left: 0;
+                top: 250px;
+                margin-left: -25px;
+                margin-top: -25px;
+                border-radius: 50%; 
+            }
+            .saturn{
+                width: 650px;
+                height: 650px;
+                border: 1px solid white;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -325px;
+                margin-top: -325px;
+                border-radius: 50%;
+                animation: zhuan 36s linear infinite;
+            }
+            .saturn::after{
+                content: '';
+                width: 60px;
+                height: 60px;
+                background: burlywood;
+                position: absolute;
+                left: 0;
+                top: 325px;
+                margin-left: -30px;
+                margin-top: -30px;
+                border-radius: 50%; 
+            }
+            /*定义旋转动画*/
+            @keyframes zhuan{
+                0%{
+                    /*transform: rotate(0);*/
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+        <div class="mars"></div>
+        <div class="saturn"></div>
+    </body>
+</html>
